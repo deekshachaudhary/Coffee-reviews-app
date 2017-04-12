@@ -3,6 +3,8 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
+// 'myApp.coffees',
+// 'myApp.reviews',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
@@ -11,7 +13,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     templateUrl: 'coffees/coffees.html',
     controller: 'coffeesCtrl'
   })
-  .when('/coffees/:coffeeId', {
+  .when('/reviews/:id', {
     templateUrl: 'reviews/reviews.html',
     controller: 'coffeesCtrl'
   })
